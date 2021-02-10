@@ -22,7 +22,6 @@ const useStyles = makeStyles({
 const DataTable = (props) => {
   const classes = useStyles();
   const rows = props.rows;
-  // const currentlyEditing = props.editIndex;
 
   return (
     <TableContainer className="studentDetailsTable" component={Paper}>

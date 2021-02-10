@@ -60,7 +60,6 @@ class App extends Component {
 
   handleDeleteEvent = (i) => {
     const rows = this.state.rows;
-    console.log(rows);
     rows.splice(i, 1);
     this.setState({ rows });
   }
@@ -78,33 +77,10 @@ class App extends Component {
       gender: rows.gender,
       course: rows.course
     });
-    this.handleDeleteEvent(i);
-    // this.setState({
-    //   rows
-    // })
-
-    
-  }
-
-  // startEditing = i => {
-  //   this.setState({ currentlyEditing: true });
-  // };
-
-  // stopEditing = () => {
-  //   this.setState({ currentlyEditing: false });
-  // };
-
-  // handleChange = (e, name, i) => {
-  //   const { value } = e.target;
-  //   this.setState(state => ({
-  //     rows: state.data.map(
-  //       (row, j) => (j === i ? { ...row, [name]: value } : row)
-  //     )
-  //   }));
-  // };
+    this.handleDeleteEvent(i);        
+  }  
 
   render () {
-    console.log(this.state.rows);
     return (
       <div className="App">
         <Grid container>
@@ -128,9 +104,7 @@ class App extends Component {
             handleEditEvent={this.handleEditEvent}
             />
           </Grid>
-        </Grid>
-        
-        
+        </Grid>        
       </div>
     );
   }  
