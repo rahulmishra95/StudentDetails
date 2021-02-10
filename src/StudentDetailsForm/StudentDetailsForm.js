@@ -48,6 +48,10 @@ import './StudentDetailsForm.css';
             id="dateOfBirth"
             name="dateOfBirth"
             label="Date Of Birth"
+            type="date"
+            InputLabelProps={{
+              shrink: true,
+            }}
             value={props.newDateOfBirth}
             onChange={props.handleInputChange}
             fullWidth
