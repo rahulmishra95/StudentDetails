@@ -9,3 +9,7 @@
     background-image: url('../Assets/unnamed.jpg');
     background-size: contain;
 }
+
+.hideTable {
+    display: none;
+}

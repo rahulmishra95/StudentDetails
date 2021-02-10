@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -12,20 +11,13 @@ import EditSharpIcon from '@material-ui/icons/EditSharp';
 import Button from '@material-ui/core/Button';
 import './StudentDetailsTable.css';
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 650,
-  },
-});
-
-
 const DataTable = (props) => {
-  const classes = useStyles();
   const rows = props.rows;
+  const classes = rows.length <1 ? 'hideTable' : 'studentDetailsTable';
 
   return (
-    <TableContainer className="studentDetailsTable" component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
+    <TableContainer className={classes} component={Paper}>
+      <Table aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Student ID</TableCell>
