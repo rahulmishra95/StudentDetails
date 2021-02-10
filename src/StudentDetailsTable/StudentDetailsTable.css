@@ -1,0 +1,11 @@
+.studentDetailsTable {
+    padding: 16px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+    background-color: white;
+    background-image: url('../Assets/unnamed.jpg');
+    background-size: contain;
+}
